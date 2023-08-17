@@ -1,0 +1,25 @@
+@import url(style.css);
+
+.blocos {
+    height: 750px;
+}
+
+#bloco__1 {
+    background-color: #ffffff;
+}
+
+#bloco__2 {
+    background-color: #8bbd7a;
+}
+
+#bloco__3 {
+    background-color: #1666ba;
+}
+
+#bloco__4 {
+    background-color: #41ca6a;
+}
+
+#bloco__5 {
+    background-color: #222222;
+}
