@@ -2,24 +2,43 @@
 
 .blocos {
     height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 #bloco__1 {
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
+    gap: 170px;
+    flex-direction: row-reverse;
+}
+
+.blocos p {
+    font-size: 1.5625rem;
+    width: 50%;
+}
+
+.img__bloco__1 {
+    height: 360px;
+}
+
+.txt__bloco__1 {
+
 }
 
 #bloco__2 {
-    background-color: #8bbd7a;
+    background-color: var(--cor-1);
 }
 
 #bloco__3 {
-    background-color: #1666ba;
+    background-color: var(--cor-3);
 }
 
 #bloco__4 {
-    background-color: #41ca6a;
+    background-color: var(--cor-2);
 }
 
 #bloco__5 {
-    background-color: #222222;
+    background-color: var(--cor-4);
 }
