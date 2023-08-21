@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste já - Aplae</title>
+    <link rel="shortcut icon" href="assets/img/logo_simple_verde_1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_teste.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container-1">
+            <h1>Teste já!</h1>
+            <p>Preencha as informações para fazer download da ferramenta</p>
+        </div>
+        <div id="container-2">
+            <div class="container-2">
+                <div class="cont-2-opt">
+                    <h1>Selecione a opção para download:</h1>
+                    <div class="radio-group">
+                        <input class="radio-input" name="radio-group" id="radio1" type="radio">
+                        <label class="radio-label" for="radio1">
+                            <img src="assets/icon/software.png" alt="">
+                            Ferramenta
+                        </label>
+                        <input class="radio-input" name="radio-group" id="radio2" type="radio">
+                        <label class="radio-label" for="radio2">
+                            <img src="assets/icon/database.png" alt="">
+                            Dados
+                        </label>
+                        <input class="radio-input" name="radio-group" id="radio3" type="radio">
+                        <label class="radio-label" for="radio3">
+                            <img src="assets/icon/sw+dtb.png" alt="">
+                            Ferramenta + Dados
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <form action="POST">
+                    <label class="label" for="nome">Nome</label>
+                    <input type="text" name="nome" id="" required placeholder="Ex: Antônio">
+                    <label class="label" for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="" required placeholder="Ex: Carlos">
+                    <label class="label" for="datanasc">Data de Nascimento</label>
+                    <input type="date" name="datanasc" id="" required>
+                    <label class="label" for="organizacao">Organização</label>
+                    <input type="text" name="organizacao" id="" required placeholder="Ex: Aplae LTDA">
+                    <button><a href="download/o-poder-do-diagrama-ternari-em-emergia.pdf"></a>Baixar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script>
+        // Capturando todos os elementos de entrada de rádio
+const radioInputs = document.querySelectorAll('.radio-input');
+
+// Adicionando um ouvinte de evento para cada elemento de entrada de rádio
+radioInputs.forEach(input => {
+    input.addEventListener('change', () => {
+        // Verificando qual rádio foi selecionado
+        if (input.checked) {
+            const label = input.nextElementSibling; // O próximo elemento é a label associada ao rádio
+            const selectedOption = label.textContent.trim(); // Obtendo o texto da label (opção selecionada)
+            console.log(`Opção selecionada: ${selectedOption}`);
+        }
+    });
+});
+
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

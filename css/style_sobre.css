@@ -1,0 +1,186 @@
+@import url('style.css');
+
+/* Estilização do container */
+.container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-image: url(/assets/img/sust_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-1 h1 {
+    font-size: 120px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 10vh 10vw;
+    gap: 70px;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 10vh 10vw;
+    gap: 70px;
+    background-color: var(--cor-1);
+}
+
+.container-2 h1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--cor-1);
+}
+
+.cont-2-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont-2-txt p {
+    color: var(--cor-preto);
+    font-size: 1.25rem;
+}
+
+.cont-2-txt h2 {
+    font-weight: 500;
+    color: var(--cor-preto);
+}
+
+.container-3 h1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--cor-branco);
+}
+
+.cont-3-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont-3-txt p {
+    color: var(--cor-branco);
+    font-size: 1.25rem;
+}
+
+.cont-3-txt h2 {
+    font-weight: 500;
+    color: var(--cor-branco);
+}
+
+.container-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10vh 10vw;
+    gap: 40px;
+}
+
+.container-4 .cont-4-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--cor-1);
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    background-image: linear-gradient(to top, #498736, #397c35, #297133, #176731, #005c2e);
+    height: 500px;
+    padding: 25px;
+}
+
+.card img {
+    height: 80px;
+    margin: 30px;
+}
+
+.card h1 {
+    font-size: 30px;
+    color: var(--cor-branco);
+    font-weight: 600;
+}
+
+.card p {
+    text-align: justify;
+    font-size: 20px;
+    color: var(--cor-branco);
+}
+
+.container-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10vh 10vw;
+    gap: 70px;
+    background-color: #8ccd7a;
+}
+
+.container-5 img {
+    height: auto;
+    width: 220px;
+}
+
+.container-5 h1 {
+    font-size: 60px;
+    color: var(--cor-7);
+    font-weight: 600;
+    padding: 1vh 2vw;
+    border: 1px solid var(--cor-7);
+    border-radius: 5px;
+}
+
+.container-5 .cont-5-p {
+    background-color: #d0e9cf;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background: #8ccd7a;
+    box-shadow: 29px 29px 58px #77ae68,
+        -29px -29px 58px #a1ec8c;
+}
+
+.container-5 h3 {
+    font-weight: 700;
+    color: var(--cor-7);
+    font-size: 25px;
+}
+
+.container-5 p {
+    color: var(--cor-7);
+    font-size: 1.25rem;
+    text-align: justify;
+}
