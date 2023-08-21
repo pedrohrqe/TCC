@@ -24,18 +24,20 @@
 }
 
 ::-webkit-scrollbar {
-    background-color: var(--cor-borda-cinza);
-    border: 1px solid var(--cor-borda-cinza-2);
     width: 14px;
+
+    border: 1px solid var(--cor-borda-cinza-2);
+    background-color: var(--cor-borda-cinza);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--cor-1);
     border-radius: 4px;
+    background-color: var(--cor-1);
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--cor-5)
+    background-color: var(
+    --cor-5)
 }
 
 * {
@@ -48,14 +50,17 @@
     color: var(--cor-preto);
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
+h1,
+h2,
+h3 {
     font-weight: 700;
+
+    text-transform: uppercase;
 }
 
 p {
-    font-weight: 400;
     font-size: 22px;
+    font-weight: 400;
 }
 
 body {
@@ -89,7 +94,8 @@ input:checked {
     accent-color: var(--cor-1);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: var(--cor-borda-cinza);
 }
 
@@ -179,14 +185,16 @@ input::placeholder, textarea::placeholder {
 /* ------------------------- */
 
 .separator {
-    background-color: #ffffff08;
-    height: 400px;
     width: 1px;
+    height: 400px;
+
+    background-color: #ffffff08;
 }
 
 .rodape {
     display: flex;
     justify-content: space-around;
+
     padding: 10vh 10vw 5vw 10vw;
 
     color: var(--cor-branco);
@@ -195,7 +203,9 @@ input::placeholder, textarea::placeholder {
 
 .rodape p {
     font-size: 0.9rem;
+
     text-transform: uppercase;
+
     color: var(--cor-branco);
 }
 
@@ -223,8 +233,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .link__3 {
-    padding: 8px;
     width: fit-content;
+    padding: 8px;
 
     text-decoration: none;
 
@@ -233,29 +243,37 @@ input::placeholder, textarea::placeholder {
 }
 
 .externals .flex-row {
-    padding-top: 15px;
-    gap: 15px;
     justify-content: center;
+
+    padding-top: 15px;
+
+    gap: 15px;
 }
+
 .externals a {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     width: 40px;
     height: 40px;
     padding: 5px;
-    border-radius: 15%;
-    border: 1px solid #ffffff30;
+
     transition: 300ms;
+
+    border: 1px solid #ffffff30;
+    border-radius: 15%;
 }
 
 .externals a:hover {
-    box-shadow: 0px 0px 8px 1px var(--cor-branco);
     transition: 300ms;
+
+    box-shadow: 0px 0px 8px 1px var(--cor-branco);
 }
 
-.externals img{
+.externals img {
     width: 90%;
+
     filter: invert();
 }
 
@@ -268,16 +286,16 @@ input::placeholder, textarea::placeholder {
 
     .link__cabecalho:hover {
         transition: 500ms;
-        box-shadow: 0px 0px 10px 5px rgba(73, 135, 54, 0.3);
 
         background-color: #8ed5785e;
+        box-shadow: 0px 0px 10px 5px rgba(73, 135, 54, 0.3);
     }
 
     .link__3:hover {
         transition: 500ms;
-        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
 
         background-color: #ffffff50;
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -289,8 +307,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .sobre__rodape {
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
     .rodape p {
@@ -334,10 +352,10 @@ input::placeholder, textarea::placeholder {
 
     .cabecalho {
         display: flex;
+        overflow: hidden;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        overflow-x: hidden;
 
         width: 90vw;
         height: auto;
@@ -352,9 +370,10 @@ input::placeholder, textarea::placeholder {
 
     .nav__pagina {
         position: absolute;
-        z-index: 99;
-        top: 8.5vh;
-        left: 100vw;
+        transform: scale(0);
+        z-index: 1;
+        top: 8.5gvh;
+        left: 101vw;
 
         flex-direction: column;
 
