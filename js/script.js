@@ -18,14 +18,16 @@ async function loadHeaderFooter() {
 
 // Configurando interações de menu
 function setupMenuInteractions() {
-    const nav = document.querySelector('.nav__pagina');
+    const nav = document.querySelector('.nav__pagina__mobile');
     const menu = document.querySelector('.menu__mobile');
+    const cabecalho = document.querySelector('.cabecalho');
 
     // Adicionando um ouvinte de evento para o clique no elemento de menu
     menu.addEventListener('click', () => {
         // Alternando a classe "active" no elemento de navegação e no elemento de menu
         nav.classList.toggle("active");
         menu.classList.toggle("active");
+        cabecalho.classList.toggle("active");
     });
 }
 

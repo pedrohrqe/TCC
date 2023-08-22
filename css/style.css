@@ -64,6 +64,8 @@ p {
 }
 
 body {
+    margin-top: 80px;
+
     background-color: var(--cor-borda-cinza);
 }
 
@@ -114,6 +116,10 @@ textarea::placeholder {
 }
 
 .cabecalho {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -277,6 +283,45 @@ textarea::placeholder {
     filter: invert();
 }
 
+.nav__pagina__mobile img{
+    width: 70px;
+}
+
+.nav__pagina__mobile {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6vw;
+    top: 60px;
+    left: 100%;
+
+    width: 90vw;
+    height: auto;
+    padding: 20px 5vw 100% 5vw;
+
+    transition: 500ms;
+
+    background-color: var(--cor-2);
+}
+
+
+.btn__mobile {
+    border: 1px solid var(--cor-borda-cinza-2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: black;
+    width: 40vw;
+    height: 40vw;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0;
+}
+
 /* ---------------------------- */
 
 @media(min-width: 1000px) {
@@ -300,6 +345,10 @@ textarea::placeholder {
 }
 
 @media(max-width: 1000px) {
+    body {
+        margin-top: 60px;
+    }
+
     .rodape {
         flex-direction: column-reverse;
 
@@ -350,7 +399,13 @@ textarea::placeholder {
         padding: 10px 0px;
     }
 
+    #btn__contate__nos {
+        background-color: var(--cor-borda-cinza);
+    }
+
     .cabecalho {
+        position: fixed;
+
         display: flex;
         overflow: hidden;
         align-items: center;
@@ -358,48 +413,44 @@ textarea::placeholder {
         justify-content: space-between;
 
         width: 90vw;
-        height: auto;
-        padding: 2vh 5vw;
+        height: 60px;
+        padding: 0vh 5vw;
 
         transition: 600ms;
+        transition: 500ms;
 
-        background-color: var(--cor-2);
+        background-color: #c0e2b6;
 
         gap: 10px;
     }
 
-    .nav__pagina {
-        position: absolute;
-        transform: scale(0);
-        z-index: 1;
-        top: 8.5gvh;
-        left: 101vw;
+    .cabecalho.active {
+        position: fixed;
+        z-index: 99999999;
+        top: 0;
 
-        flex-direction: column;
-
-        width: 90vw;
-        padding: 0vh 5vw 2vh 5vw;
-
-        transition: 400ms;
-
-        background-color: var(--cor-2);
-
-        gap: 5px;
+        transition: 500ms;
     }
 
-    .nav__pagina.active {
-        z-index: 99;
+    .nav__pagina {
+        display: none
+    }
+
+    .nav__pagina__mobile.active {
+        position: fixed;
+        top: 60px;
         left: 0;
+        z-index: 99999999;
 
-        transform: scale(1);
+        padding-top: 20px;
 
-        background-color: var(--cor-2);
+        transition: 500ms;
     }
 
     .menu__mobile {
-        position: relative;
-        top: 0;
-        right: 0;
+        position: fixed;
+        top: 15px;
+        right: 20px;
 
         display: block;
 
