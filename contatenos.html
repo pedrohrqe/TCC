@@ -20,14 +20,14 @@
         <div class="container-2">
             <form method="POST" action="enviacontato.php" class="form_contato">
                 <h1>preencha as informações abaixo:</h1>
-                <div class="flex-row" style="gap: 20px; height: fit-content;">
-                    <div class="flex-column" style="align-items: baseline;">
+                <div class="names">
+                    <div>
                         <label for="nome">Nome <strong>*</strong></label>
-                        <input type="text" style="width: 90%" name="nome" maxlength="15" required placeholder="Ex: Pedro" />
+                        <input type="text" name="nome" maxlength="15" required placeholder="Ex: Pedro" />
                     </div>
-                    <div class="flex-column" style="align-items: baseline">
+                    <div>
                         <label for="nome">Sobrenome <strong>*</strong></label>
-                        <input type="text" style="width: 90%" name="nome" maxlength="15" required placeholder="Ex: Henrique" />
+                        <input type="text" name="nome" maxlength="15" required placeholder="Ex: Henrique" />
                     </div>
                 </div>
                 <label for="email">Email <strong>*</strong></label>
@@ -39,7 +39,7 @@
                 <label for="empresa">Empresa <strong>*</strong></label>
                 <input type="text" name="empresa" placeholder="Ex: Emergia SA" required>
                 <label for="email">Mensagem <strong>*</strong></label>
-                <textarea class="textarea" name="msg" required placeholder="Ex: Gostaria de ajuda para..."></textarea>
+                <textarea class="textarea" name="msg" placeholder="Ex: Gostaria de ajuda para..." maxlength="300" required></textarea>
                 <label for="require" class="form-obs">Campos obrigatórios sinalizados <strong>*</strong></label>
                 <button class="btn" type="submit">Enviar ></button></a>
             </form>

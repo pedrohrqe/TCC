@@ -7,7 +7,7 @@
     --cor-branco: #fcfefb;
     --cor-borda-cinza: #50505030;
     --cor-borda-cinza-2: #2929292d;
-    --cor-borda-cinza: #e7e7e7;
+    --cor-borda-cinza-3: #e7e7e7;
     --cor-1: #498736;
     --cor-2: #c0e2b6;
     --cor-3: #1666ba;
@@ -25,7 +25,6 @@
 
 ::-webkit-scrollbar {
     width: 14px;
-
     border: 1px solid var(--cor-borda-cinza-2);
     background-color: var(--cor-borda-cinza);
 }
@@ -36,51 +35,46 @@
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(
-    --cor-5)
+    background-color: var(--cor-5);
 }
 
 * {
     font-family: 'Inter', serif;
     font-weight: 300;
-
     margin: 0;
     padding: 0;
-
     color: var(--cor-preto);
 }
 
-h1,
-h2,
-h3 {
-    font-weight: 700;
-
+h1, h2, h3 {
+    font-weight: 800;
     text-transform: uppercase;
 }
 
 p {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 400;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
 }
 
 body {
     margin-top: 80px;
-
     background-color: var(--cor-borda-cinza);
 }
 
 hr {
     height: 1px;
-
     opacity: 30%;
     border: none;
     outline: none;
     background-color: var(--cor-5);
 }
 
-input,
-label,
-textarea {
+input, label, textarea {
     outline: none;
 }
 
@@ -96,8 +90,7 @@ input:checked {
     accent-color: var(--cor-1);
 }
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder {
     color: var(--cor-borda-cinza);
 }
 
@@ -119,14 +112,11 @@ textarea::placeholder {
     position: absolute;
     z-index: 9999;
     top: 0;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     width: 100%;
     height: 80px;
-
     background-color: var(--cor-branco);
 }
 
@@ -136,21 +126,16 @@ textarea::placeholder {
 
 .links__cabecalho {
     font-size: 0.875rem;
-
     display: flex;
     justify-content: center;
-
     gap: 20px;
 }
 
 .link__cabecalho {
     font-weight: 500;
-
     padding: 8px;
-
     text-align: center;
     text-decoration: none;
-
     color: var(--cor-preto);
     border-radius: 5px;
 }
@@ -158,15 +143,12 @@ textarea::placeholder {
 .nav__pagina {
     display: flex;
     justify-content: space-between;
-
     width: 48vw;
 }
 
 .menu__mobile {
     display: none;
-
     width: fit-content;
-
     cursor: pointer;
 }
 
@@ -174,7 +156,7 @@ textarea::placeholder {
     width: 32px;
     height: 4px;
     margin: 15%;
-
+    border-radius: 50px;
     background-color: var(--cor-1);
 }
 
@@ -188,37 +170,29 @@ textarea::placeholder {
     border: 1px solid var(--cor-1);
 }
 
-/* ------------------------- */
-
 .separator {
     width: 1px;
     height: 400px;
-
     background-color: #ffffff08;
 }
 
 .rodape {
     display: flex;
     justify-content: space-around;
-
     padding: 10vh 10vw 5vw 10vw;
-
     color: var(--cor-branco);
     background-color: var(--cor-6);
 }
 
 .rodape p {
     font-size: 0.9rem;
-
     text-transform: uppercase;
-
     color: var(--cor-branco);
 }
 
 .sobre__rodape {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
 
@@ -230,29 +204,34 @@ textarea::placeholder {
 .links__rodape {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
-}
-
-.flex-center {
-    align-items: center;
 }
 
 .link__3 {
     width: fit-content;
     padding: 8px;
-
     text-decoration: none;
-
     color: var(--cor-branco);
     border-radius: 5px;
 }
 
+.link__3:hover {
+    background-color: #ffffff50;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.link__cabecalho {
+    transition: 500ms;
+}
+
+.link__cabecalho:hover {
+    background-color: #8ed5785e;
+    box-shadow: 0px 0px 10px 5px rgba(73, 135, 54, 0.3);
+}
+
 .externals .flex-row {
     justify-content: center;
-
     padding-top: 15px;
-
     gap: 15px;
 }
 
@@ -260,216 +239,158 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 40px;
     height: 40px;
     padding: 5px;
-
     transition: 300ms;
-
     border: 1px solid #ffffff30;
     border-radius: 15%;
 }
 
 .externals a:hover {
-    transition: 300ms;
-
     box-shadow: 0px 0px 8px 1px var(--cor-branco);
 }
 
 .externals img {
     width: 90%;
-
     filter: invert();
-}
-
-.nav__pagina__mobile img{
-    width: 70px;
 }
 
 .nav__pagina__mobile {
     position: fixed;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6vw;
     top: 60px;
     left: 100%;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 90vw;
     height: auto;
     padding: 20px 5vw 100% 5vw;
-
     transition: 500ms;
-
-    background-color: var(--cor-2);
+    background-color: var(--cor-borda-cinza-3);
+    gap: 6vw;
 }
-
 
 .btn__mobile {
-    border: 1px solid var(--cor-borda-cinza-2);
-    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 20px;
-    color: black;
     width: 40vw;
     height: 40vw;
-    text-decoration: none;
-    font-weight: 600;
     margin: 0;
+    text-decoration: none;
+    color: black;
+    border: 1px solid var(--cor-borda-cinza-2);
+    border-radius: 5px;
+    gap: 15px;
 }
 
-/* ---------------------------- */
+.btn__mobile:hover {
+    background-color: #49873630;
+}
 
-@media(min-width: 1000px) {
-    .link__cabecalho {
-        transition: 500ms;
-    }
-
-    .link__cabecalho:hover {
-        transition: 500ms;
-
-        background-color: #8ed5785e;
-        box-shadow: 0px 0px 10px 5px rgba(73, 135, 54, 0.3);
-    }
-
-    .link__3:hover {
-        transition: 500ms;
-
-        background-color: #ffffff50;
-        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
-    }
+.btn__mobile__img {
+    width: 70px;
+    pointer-events: none;
+    image-rendering: optimizeSpeed;
 }
 
 @media(max-width: 1000px) {
     body {
         margin-top: 60px;
     }
-
     .rodape {
         flex-direction: column-reverse;
-
         padding: 50px 10px 80px 10px;
     }
-
     .sobre__rodape {
         align-items: center;
         justify-content: center;
     }
-
     .rodape p {
         text-align: center;
     }
-
     .separator {
         width: 100%;
         height: 1px;
         margin: 4vh 0vw;
     }
-
     .link__3 {
         font-size: 0.875rem;
-
         width: fit-content;
         padding: 8px 1px;
     }
-
     .link__2 {
         width: 100%;
     }
-
     .link__1 {
         width: 100%;
-
         border: 1px solid var(--cor-preto);
     }
-
     .links__cabecalho {
         flex-direction: column;
-
         height: auto;
-
         gap: 5px;
     }
-
     .link__cabecalho {
         padding: 10px 0px;
     }
-
     #btn__contate__nos {
-        background-color: var(--cor-borda-cinza);
+        background-color: var(--cor-2);
     }
-
     .cabecalho {
         position: fixed;
-
         display: flex;
         overflow: hidden;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-
         width: 90vw;
         height: 60px;
         padding: 0vh 5vw;
-
         transition: 600ms;
         transition: 500ms;
-
-        background-color: #c0e2b6;
-
+        background-color: var(--cor-borda-cinza-3);
+        box-shadow: 0px 3px 10px 7px var(--cor-borda-cinza-2);
         gap: 10px;
     }
-
     .cabecalho.active {
         position: fixed;
         z-index: 99999999;
         top: 0;
-
         transition: 500ms;
     }
-
     .nav__pagina {
-        display: none
+        display: none;
     }
-
     .nav__pagina__mobile.active {
         position: fixed;
+        z-index: 99999999;
         top: 60px;
         left: 0;
-        z-index: 99999999;
-
         padding-top: 20px;
-
         transition: 500ms;
     }
-
     .menu__mobile {
         position: fixed;
         top: 15px;
         right: 20px;
-
         display: block;
-
         transition: 500ms;
     }
-
     .menu__mobile .barra {
         transition: 500ms;
     }
-
     .menu__mobile.active .barra:nth-child(2) {
         opacity: 0;
     }
-
     .menu__mobile.active .barra:nth-child(1) {
         transition: 500ms;
         transform: translateY(5px) rotate( 45deg);
     }
-
     .menu__mobile.active .barra:nth-child(3) {
         transition: 500ms;
         transform: translateY(-13px) rotate( -45deg);
