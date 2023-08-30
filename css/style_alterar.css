@@ -1,0 +1,256 @@
+@import url(style.css);
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 10vh 10vw;
+
+    background-color: var(--cor-6);
+
+    gap: 15px;
+}
+
+.container-1 h1 {
+    color: var(--cor-branco);
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 15px;
+
+    gap: 10px;
+}
+
+.container-2 h1 {
+    font-size: 1.5rem;
+}
+
+.container-2 select {
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    height: 32px;
+    padding: 0px 10px;
+
+    transition: 300ms;
+    text-align: center;
+
+    color: var(--cor-branco);
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--cor-1);
+    box-shadow: inset 0px 0px 12px 0px rgb(0, 0, 0, 0.1);
+}
+
+.container-2 select:hover {
+    transition: 300ms;
+
+    color: var(--cor-preto);
+    background-color: var(--cor-8);
+}
+
+.container-2 option {
+    color: var(--cor-preto);
+    background-color: var(--cor-2);
+}
+
+.container-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 400px;
+    padding-bottom: 40px;
+
+    gap: 20px;
+}
+
+.separador {
+    width: 1px;
+    height: 280px;
+
+    background-color: var(--cor-borda-cinza);
+}
+
+form {
+    display: none;
+    flex-direction: column;
+
+    min-width: 250px;
+    max-width: 250px;
+    padding: 15px;
+
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 5px;
+
+    gap: 10px;
+}
+
+form.active {
+    display: flex;
+}
+
+form h1,
+.container-3 h1 {
+    font-size: 1.5rem;
+
+    padding-bottom: 15px;
+}
+
+form label {
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+form input {
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    width: 100%;
+    height: 32px;
+
+    text-indent: 10px;
+
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 12px 0px rgb(0, 0, 0, 0.1);
+}
+
+form ul {
+    font-size: 0.625rem;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px 0px;
+    padding: 15px 25px;
+
+    text-align: left;
+
+    border: 1px solid var(--cor-borda-cinza-2);
+    border-radius: 5px;
+    background-color: #008a4548;
+
+    gap: 10px;
+}
+
+form ul li {
+    font-weight: 500;
+}
+
+form button {
+    height: 32px;
+
+    color: var(--cor-branco);
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 5px;
+    background-color: var(--cor-1);
+}
+
+form button:hover {
+    transition: 300ms;
+
+    color: var(--cor-preto);
+    background-color: var(--cor-2);
+    box-shadow: 0 0 15px 0px var(--cor-1);
+}
+
+.checkbox-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: end;
+    gap: 10px;
+}
+
+.checkbox-cont {
+    font-size: 20px;
+
+    position: relative;
+
+    display: flex;
+    align-items: baseline;
+
+    width: 20px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+
+    width: fit-content;
+    min-width: 20px;
+    height: fit-content;
+    min-height: 20px;
+
+    transition: 400ms;
+
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 5px;
+    background-color: var(--cor-borda-cinza);
+    
+    background-image: url(/assets/icon/pass_hide.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.checkbox:checked+.checkmark {
+    transition: 400ms;
+
+    background-color: var(--cor-1);
+    background-image: url(/assets/icon/pass_show.png);
+}
+
+.checkmark:after {
+    position: absolute;
+
+    display: none;
+
+    content: "";
+}
+
+.checkbox:checked~.checkmark:after {
+    display: block;
+}
+
+.container-3 a:hover {
+    transition: 300ms;
+
+    color: var(--cor-preto);
+    background-color: var(--cor-2);
+    box-shadow: 0 0 15px 0px var(--cor-1);
+}
+
+@media(max-width: 1000px) {
+    form {
+        width: 85vw;
+        max-width: none;
+    }
+}

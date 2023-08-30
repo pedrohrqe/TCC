@@ -157,11 +157,13 @@ main {
 }
 
 .cont-link {
-    font-size: 1.2rem;
     font-weight: 700;
 
-    min-width: 200px;
-    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 32px;
 
     transition: 500ms;
     text-align: center;
@@ -211,7 +213,7 @@ main {
 
 @media(max-width: 1000px) {
     .cont-link {
-        min-width: 160px;
+        min-width: 120px;
     }
 
     .container img {

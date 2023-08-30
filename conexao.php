@@ -12,7 +12,7 @@ if ($mysqli->connect_error) {
     echo "<script>
         alert('Erro ao conectar!');
         setTimeout(function() {
-            window.location.href = 'teste.html';
+            window.location.href = 'index.php';
         }, 500); // 500 milissegundos (0.5 segundos)
     </script>";
 }

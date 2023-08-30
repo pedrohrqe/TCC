@@ -1,31 +1,43 @@
 <?php
-include('conexao.php');
+include_once ('conexao.php');
+include_once ('sessaoativa.php');
 
-if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['telefone']) && isset($_POST['nome']) && isset($_POST['sobrenome']) && isset($_POST['organizacao'])) {
+if (isset($_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['nome'], $_POST['sobrenome'], $_POST['organizacao'], $_POST['g-recaptcha-response'])) {
+    $captcha_response = $_POST['g-recaptcha-response'];
+    $captcha_secret_key = '6Ler38wnAAAAAMmJ6mR2w1xZ7Ndx1ghu6GaG_lJU'; // Substitua pela sua chave secreta do reCAPTCHA
+
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$captcha_secret_key&response=$captcha_response");
+    $responseKeys = json_decode($response, true);
+
+    if (intval($responseKeys["success"]) !== 1) {
+        echo "<script>alert('Por favor, marque o reCAPTCHA corretamente.');
+            window.location.href = 'cadastro.php';
+            </script>";
+        exit();
+    }
 
     $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $mysqli->real_escape_string($_POST['senha']);
+    $senha = $_POST['senha'];
+    $hash = password_hash($senha, PASSWORD_DEFAULT);
     $telefone = $mysqli->real_escape_string($_POST['telefone']);
     $nome = $mysqli->real_escape_string($_POST['nome']);
     $sobrenome = $mysqli->real_escape_string($_POST['sobrenome']);
     $organizacao = $mysqli->real_escape_string($_POST['organizacao']);
 
-    // Verificar se o email já está cadastrado
-    $email_check_query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    $email_check_query = "SELECT COUNT(*) as count FROM users WHERE email = '$email'";
     $email_check_result = $mysqli->query($email_check_query);
+    $row = $email_check_result->fetch_assoc();
 
-    if ($email_check_result && $email_check_result->num_rows > 0) {
+    if ($row['count'] > 0) {
         echo "<script>alert('Já existe um usuário com esse e-mail cadastrado!'); 
             window.location.href = 'cadastro.php';
             </script>";
     } else {
-        $sql_code = "INSERT INTO `users` (`id`, `nome`, `sobrenome`, `telefone`, `organizacao`, `email`, `senha`) VALUES (NULL, '$nome', '$sobrenome', '$telefone', '$organizacao', '$email', '$senha')";
+        $sql_code = "INSERT INTO `users` (`nome`, `sobrenome`, `telefone`, `organizacao`, `email`, `senha`) VALUES ('$nome', '$sobrenome', '$telefone', '$organizacao', '$email', '$hash')";
 
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->connect_error);
-
-        if ($sql_query) {
+        if ($mysqli->query($sql_code)) {
             echo "<script>alert('Cadastro executado com sucesso!');
-                window.location.href = 'teste.php';
+                window.location.href = 'login.php';
                 </script>"; 
         } else {
             echo "<script>alert('Erro ao cadastrar!');</script>";
@@ -46,6 +58,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['telefone']
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_cadastro.css">
     <script src="js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -63,12 +76,12 @@ if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['telefone']
                     <input required type="tel" id="telefone" name="telefone" class="form__input"
                         placeholder="(XX) X XXXX-XXXX" required maxlength="16" minlength="4">
                     <label for="organizacao">Informe qual sua organização</label>
-                    <input required type="text" placeholder="Unip" class="form__input" name="organizacao" minlength="4">
+                    <input required type="text" placeholder="Unip" class="form__input" name="organizacao" minlength="4" maxlength="50">
                     <label for="usuario">Informe seu e-mail</label>
                     <input required type="text" name="email" class="form__input" placeholder="seu_user@2023"
                         maxlength="70" minlength="4">
                     <label for="senha">Informe uma senha</label>
-                    <input required type="password" name="senha" class="form__input" placeholder="Senha@2023"
+                    <input required type="password" name="senha" class="form__input senha" placeholder="Senha@2023"
                         maxlength="30" id="senha" required minlength="8">
                     <div>
                         <label for="mostrarsenha">Mostrar senha</label>
@@ -81,6 +94,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['telefone']
                         <li>Sua senha deve conter um caractere maiúsculo, um minúsculo e um caractere especial</li>
                         <li>A senha deve ter no mínimo 8 caracteres</li>
                     </ul>
+                    <div class="g-recaptcha" data-sitekey="6Ler38wnAAAAALSbw0_1X3gAk98rcnqhkpV66UIQ"></div>
                     <button type="submit" id="submit">Criar conta</button>
                 </form>
             </div>
@@ -90,9 +104,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['telefone']
         </div>
     </main>
     <footer></footer>
-    <script src="js/script-login.js"></script>
-    <script src="js/script-contatenos.js"></script>
-    <script src="js/script-cadastro.js"></script>
+    <script src="js/script-formulario.js"></script>
 </body>
 
 </html>

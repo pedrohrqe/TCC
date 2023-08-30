@@ -1,38 +1,42 @@
 <?php
-include('conexao.php');
 
-if (isset($_POST['email']) || isset($_POST['senha'])) {
+session_start();
 
-    if (strlen($_POST['email']) == 0) {
-        echo "Preencha o email";
-    } else if (strlen($_POST['senha']) == 0) {
-        echo "Preencha a senha";
-    } else {
+if (isset($_SESSION['id'])) {
+    header("Location: teste.php");
+    exit();
+}
 
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $senha = $mysqli->real_escape_string($_POST['senha']);
+include_once ('conexao.php');
+include_once ('sessaoativa.php');
 
-        $sql_code = "SELECT * FROM users WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+if (!empty($_POST['email']) && !empty($_POST['senha'])) {
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $senha = $_POST['senha'];
 
-        $quantidade = $sql_query->num_rows;
+    $sql_code = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    $sql_query = mysqli_query($mysqli, $sql_code);
 
-        if($quantidade == 1) {
-            
-            $usuario = $sql_query->fetch_assoc();
-
-            if(!isset($_SESSION)) {
-                session_start();
-            }
-
-            $_SESSION['id'] = $usuario['id'];
+    if ($sql_query && $sql_query->num_rows === 1) {
+        $usuario = mysqli_fetch_assoc($sql_query);
+        if (password_verify($senha, $usuario['senha'])) {
+            // Armazena as informações do usuário
+            $_SESSION['id'] = $usuario['id']; 
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['sobrenome'] = $usuario['sobrenome'];
+            $_SESSION['telefone'] = $usuario['telefone'];
+            $_SESSION['organizacao'] = $usuario['organizacao'];
+            $_SESSION['email'] = $usuario['email'];
 
-            header("Location: teste.php");
-
+            echo "<script>alert('Bem vindo!');
+            window.location.href = 'teste.php';
+            </script>";
+            exit();
         } else {
             echo "<script>alert('E-mail ou senha incorretos!');</script>";
         }
+    } else {
+        echo "<script>alert('E-mail ou senha incorretos!');</script>";
     }
 }
 ?>
@@ -64,7 +68,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                     <input type="text" name="email" class="form__input" placeholder="seu_user@2023" maxlength="70"
                         required>
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" class="form__input" placeholder="Senha@2023" maxlength="30"
+                    <input type="password" name="senha" class="form__input senha" placeholder="Senha@2023" maxlength="30"
                         id="senha" required>
                     <div>
                         <label for="mostrarsenha">Mostrar senha</label>
@@ -84,7 +88,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         </div>
     </main>
     <footer></footer>
-    <script src="js/script-login.js"></script>
+    <script src="js/script-formulario.js"></script>
 </body>
 
 </html>

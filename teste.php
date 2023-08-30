@@ -1,10 +1,10 @@
-<?php
+<?php 
 
-if(!isset($_SESSION)){
-    session_start();
-}
+include_once ('protect.php');
+include_once ('sessaoativa.php');
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,6 +15,7 @@ if(!isset($_SESSION)){
     <link rel="shortcut icon" href="assets/img/logo_simple_verde_1.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_teste.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -24,62 +25,46 @@ if(!isset($_SESSION)){
             <h1>Teste já!</h1>
             <p>Preencha as informações para fazer download da ferramenta</p>
         </div>
-        <div id="container-2">
-            <div class="container-2">
-                <div class="cont-2-opt">
-                    <h1>Selecione a opção para download:</h1>
-                    <div class="radio-group">
-                        <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                        <label class="radio-label" for="radio1">
-                            <img src="assets/icon/software.png" alt="">
-                            <p>Ferramenta</p>
-                        </label>
-                        <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                        <label class="radio-label" for="radio2">
-                            <img src="assets/icon/database.png" alt="">
-                            <p>Dados</p>
-                        </label>
-                        <input class="radio-input" name="radio-group" id="radio3" type="radio">
-                        <label class="radio-label" for="radio3">
-                            <img src="assets/icon/sw+dtb.png" alt="">
-                            <p>Ferramenta + Dados</p>
-                        </label>
-                    </div>
+        <div class="container-2">
+            <div class="container-3">
+                <h1>Selecione a opção para download:</h1>
+                <div class="radio-group">
+                    <input class="radio-input" name="radio-group" id="radio1" type="radio">
+                    <label class="radio-label" for="radio1">
+                        <img src="assets/icon/software.png" alt="">
+                        <p>Ferramenta</p>
+                    </label>
+                    <input class="radio-input" name="radio-group" id="radio2" type="radio">
+                    <label class="radio-label" for="radio2">
+                        <img src="assets/icon/database.png" alt="">
+                        <p>Dados</p>
+                    </label>
+                    <input class="radio-input" name="radio-group" id="radio3" type="radio">
+                    <label class="radio-label" for="radio3">
+                        <img src="assets/icon/sw+dtb.png" alt="">
+                        <p>Ferramenta + Dados</p>
+                    </label>
                 </div>
-                <hr>
-                <form action="POST">
-                    <label class="label" for="nome">Nome</label>
-                    <input type="text" name="nome" id="" required placeholder="Ex: Antônio">
-                    <label class="label" for="sobrenome">Sobrenome</label>
-                    <input type="text" name="sobrenome" id="" required placeholder="Ex: Carlos">
-                    <label class="label" for="datanasc">Data de Nascimento</label>
-                    <input type="date" name="datanasc" id="" value="2000-01-01" required>
-                    <label class="label" for="organizacao">Organização</label>
-                    <input type="text" name="organizacao" id="" required placeholder="Ex: Aplae LTDA">
-                    <button class="btn__submit">Baixar</button>
-                </form>
+                <a href="" id="btn__baixar">BAIXAR</a>
+            </div>
+            <div class="container-4">
+                <h1>informações de usuário</h1>
+                <div class="container-5">
+                    <p id="nome">Nome: <?php echo $_SESSION['nome']?></p>
+                    <p id="sobrenome">Sobrenome: <?php echo $_SESSION['sobrenome']?></p>
+                    <p id="contato">Telefone: <?php echo $_SESSION['telefone']?></p>
+                    <p id="Organização">Organização: <?php echo $_SESSION['organizacao']?></p>
+                    <p id="email">Email: <?php echo $_SESSION['email']?></p>
+                    <p> Senha: *************</p>
+                </div>
+                <hr style="margin: 0px;">
+                <a href="alterar.php">Alterar dados</a>
+                <a href="sair.php">sair</a>
             </div>
         </div>
     </main>
     <footer></footer>
-    <script>
-        // Capturando todos os elementos de entrada de rádio
-        const radioInputs = document.querySelectorAll('.radio-input');
-
-        // Adicionando um ouvinte de evento para cada elemento de entrada de rádio
-        radioInputs.forEach(input => {
-            input.addEventListener('change', () => {
-                // Verificando qual rádio foi selecionado
-                if (input.checked) {
-                    const label = input.nextElementSibling; // O próximo elemento é a label associada ao rádio
-                    const selectedOption = label.textContent.trim(); // Obtendo o texto da label (opção selecionada)
-                    console.log(`Opção selecionada: ${selectedOption}`);
-                }
-            });
-        });
-
-    </script>
-    <script src="js/script.js"></script>
+    <script src="js/script-opcoes-de-download.js"></script>
 </body>
 
 </html>

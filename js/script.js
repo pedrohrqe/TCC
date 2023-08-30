@@ -4,7 +4,7 @@ async function loadHeaderFooter() {
     const footerElement = document.getElementsByTagName("footer")[0];
 
     // Fazendo uma requisição assíncrona para o arquivo "header.html"
-    const headerResponse = await fetch("header.html");
+    const headerResponse = await fetch("header.php");
     const headerData = await headerResponse.text();
     // Preenchendo o conteúdo do elemento de header com o conteúdo do arquivo
     headerElement.innerHTML = headerData;
