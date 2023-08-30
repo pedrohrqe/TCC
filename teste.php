@@ -45,7 +45,7 @@ include_once ('sessaoativa.php');
                         <p>Ferramenta + Dados</p>
                     </label>
                 </div>
-                <a href="" id="btn__baixar">BAIXAR</a>
+                <a href="" id="btn__baixar" download="Emergia">BAIXAR</a>
             </div>
             <div class="container-4">
                 <h1>informações de usuário</h1>
