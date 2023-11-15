@@ -21,7 +21,7 @@ function enviarEmail($destinatario, $nome, $sobrenome, $linkredefinicao) {
     $mail = new PHPMailer(true);
 
     $username = 'aplae.br@gmail.com';
-    $password = 'cqoancmqsvifsqli';
+    $password = 'qljmuzmxuvzywzde';
 
     try {
         // Configuração do servidor SMTP

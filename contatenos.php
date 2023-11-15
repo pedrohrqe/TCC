@@ -1,7 +1,4 @@
 <?php
-
-include_once ('sessaoativa.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +22,11 @@ include_once ('sessaoativa.php');
         </div>
         <div class="container-2">
             <form method="POST" action="enviacontato.php" class="form_contato">
-                <h1>preencha as informações abaixo:</h1>
+                <h1>Preencha as informações abaixo:</h1>
                 <div class="names">
                     <div>
                         <label for="nome">Nome <strong>*</strong></label>
-                        <input type="text" name="nome" maxlength="15" required placeholder="Ex: Pedro" />
+                        <input type="text" name="nome" maxlength="15" required placeholder="Ex: Pedro" autofocus/>
                     </div>
                     <div>
                         <label for="nome">Sobrenome <strong>*</strong></label>
@@ -63,7 +60,7 @@ include_once ('sessaoativa.php');
                 <h1>Contato Direto</h1>
                 <div class="email">
                     <img src="assets/icon/email.png" alt="Icone-email">
-                    <p>contato@aplae.com.br</p>
+                    <p>aplae.br@gmail.com</p>
                 </div>
                 <hr>
                 <h1>Visite nosso escritório</h1>

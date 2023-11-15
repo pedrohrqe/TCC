@@ -1,6 +1,5 @@
 <?php
 include_once ('conexao.php');
-include_once ('sessaoativa.php');
 
 if (isset($_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['nome'], $_POST['sobrenome'], $_POST['organizacao'], $_POST['g-recaptcha-response'])) {
     $captcha_response = $_POST['g-recaptcha-response'];
@@ -69,7 +68,7 @@ if (isset($_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['nome'], 
                 <h1 class="titulo">Cadastre-se</h1>
                 <form method="POST">
                     <label for="nome">Informe seu nome</label>
-                    <input required type="text" class="form__input" name="nome" placeholder="Pedro" minlength="4">
+                    <input required type="text" class="form__input" name="nome" placeholder="Pedro" minlength="4" autofocus>
                     <label for="sobrenome">Informe seu sobrenome</label>
                     <input required type="text" class="form__input" name="sobrenome" placeholder="Henrique" minlength="4">
                     <label for="telefone">Informe seu telefone celular</label>
@@ -77,9 +76,9 @@ if (isset($_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['nome'], 
                         placeholder="(XX) X XXXX-XXXX" required maxlength="16" minlength="4">
                     <label for="organizacao">Informe qual sua organização</label>
                     <input required type="text" placeholder="Unip" class="form__input" name="organizacao" minlength="4" maxlength="50">
-                    <label for="usuario">Informe seu e-mail</label>
+                    <label for="usuario">Informe seu e-mail (permitido somente e-mail da UNIP)</label>
                     <input required type="text" name="email" class="form__input" placeholder="seu_user@2023"
-                        maxlength="70" minlength="4">
+                        maxlength="70" minlength="4" id="email">
                     <label for="senha">Informe uma senha</label>
                     <input required type="password" name="senha" class="form__input senha" placeholder="Senha@2023"
                         maxlength="30" id="senha" required minlength="8">
@@ -94,12 +93,12 @@ if (isset($_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['nome'], 
                         <li>Sua senha deve conter um caractere maiúsculo, um minúsculo e um caractere especial</li>
                         <li>A senha deve ter no mínimo 8 caracteres</li>
                     </ul>
-                    <div class="g-recaptcha" data-sitekey="6Ler38wnAAAAALSbw0_1X3gAk98rcnqhkpV66UIQ"></div>
+                    <div class="g-recaptcha" data-sitekey="6Ler38wnAAAAALSbw0_1X3gAk98rcnqhkpV66UIQ" style="align-self: center;"></div>
                     <button type="submit" id="submit">Criar conta</button>
                 </form>
             </div>
             <div class="container-3">
-                <video src="assets/video/video__home.mp4" autoplay muted loop></video>
+                <video src="https://i.imgur.com/ktRm9E9.mp4" autoplay muted loop></video>
             </div>
         </div>
     </main>

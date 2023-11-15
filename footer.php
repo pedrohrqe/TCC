@@ -1,6 +1,15 @@
+<?php
+
+include ('sessaoativa.php');
+
+$btnEntrar = textoBtnEntrar();
+
+?>
+
+
 <footer class="rodape">
     <div class="sobre__rodape">
-        <a href="https://www.unip.br/"><img src="assets/img/logo_regular_branco.png" alt="" class="img__rodape" /></a>
+        <a href="index.php"><img src="assets/img/logo_regular_branco.png" alt="" class="img__rodape" /></a>
         <p>
             UNIP - Chácara Sto. Antônio
             <br>
@@ -26,13 +35,15 @@
     </div>
     <div class="separator"></div>
     <div class="links__rodape flex-center">
-        <a href="produto.php" class="link__3">PRODUTO</a>
-        <a href="pesquisa.php" class="link__3">PESQUISA</a>
-        <a href="sobre.php" class="link__3">SOBRE NÓS</a>
+        <a href="produto.php" class="link__3">Produto</a>
+        <a href="pesquisa.php" class="link__3">Pesquisa</a>
+        <a href="aaplae.php" class="link__3">A Aplae</a>
+        <a href="staff.php" class="link__3">Staff</a>
+        <a href="doacao.php" class="link__3">Doação</a>
     </div>
     <div class="separator"></div>
     <div class="flex-column flex-center">
-        <a href="login.php" class="link__3">ENTRAR</a>
-        <a href="contatenos.php" class="link__3">CONTATE-NOS</a>
+        <a href="login.php" class="link__3"><?= $btnEntrar ?></a>
+        <a href="contatenos.php" class="link__3">Contate-nos</a>
     </div>
 </footer>

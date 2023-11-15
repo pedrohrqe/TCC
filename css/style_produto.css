@@ -1,1 +1,275 @@
-@import url(style.css);
+@import url(/css/style.css);
+
+main {
+    background-color: var(--p1-cinza);
+}
+
+.container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 700px;
+    padding: 0vh 10vw;
+
+    background: url(/assets/shapes/s05.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: cover;
+
+    gap: 30px;
+}
+
+.container-1-txt {
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.txt-container-1 {
+    font-family: 'EB Garamound', serif;
+    font-size: 2rem;
+
+    color: var(--p1-preto);
+}
+
+.img-container-1 {
+    width: 200px;
+
+    filter: invert();
+}
+
+.container-1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--p1-branco);
+    border: none;
+    outline: none;
+    background: none;
+    background-color: var(--p1-verde);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
+}
+
+.container-1 a:hover {
+    cursor: pointer;
+    transition: 300ms;
+
+    background-color: var(--p1-cinza-2);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 12vh 0px;
+
+    background: url(/assets/shapes/s06.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    gap: 20px;
+}
+
+.bloco {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 90vw;
+    height: 350px;
+
+    background-color: var(--p1-branco);
+    box-shadow: 0 0 15px 5px #00000055;
+
+    gap: 40px;
+}
+
+.bloco_img {
+    position: relative;
+    left: 0px;
+
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    width: 30vw;
+    min-width: 30vw;
+    height: 100%;
+}
+
+.bloco_img img {
+    min-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.bloco_txt {
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+    margin-top: 40px;
+    margin-right: 40px;
+
+    gap: 30px;
+}
+
+.bloco_txt h1 {
+    font-size: 2.5rem;
+}
+
+.bloco_txt p {
+    text-align: justify;
+}
+
+#bloco-1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--p1-branco);
+    border: none;
+    outline: none;
+    background: none;
+    background-color: var(--p1-verde);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
+}
+
+#bloco-1 a:hover {
+    cursor: pointer;
+    transition: 300ms;
+
+    background-color: var(--p1-cinza-2);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
+}
+
+
+.container-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 800px;
+
+    background: url(/assets/shapes/s07.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    gap: 25px;
+}
+
+.card_item div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.card_item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+
+    width: 300px;
+    height: 450px;
+    padding: 50px 20px;
+
+    text-align: justify;
+
+    background-color: var(--p1-branco);
+    box-shadow: 0 0 15px 5px #00000055;
+}
+
+.card_item img {
+    width: 200px;
+}
+
+.card_item h1 {
+    font-size: 2.375rem;
+}
+
+@media(max-width: 1000px) {
+    .container-1 {
+        height: fit-content;
+        padding: 0vh 5vw;
+    }
+
+    .txt-container-1 {
+        font-size: 1.875rem;
+    }
+
+    .container-3 {
+        flex-direction: column;
+
+        height: fit-content;
+        padding: 15px 0px;
+    }
+
+    .card_item {
+        width: 80vw;
+        height: fit-content;
+
+        gap: 40px;
+    }
+
+    .card_item img {
+        bottom: 0;
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .card_item div {
+        bottom: 0;
+    }
+
+    .bloco {
+        flex-direction: column;
+
+        height: fit-content;
+
+        gap: 0;
+    }
+
+    .bloco_txt {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .bloco_txt h1 {
+        font-size: 1.875rem;
+    }
+
+    .bloco_img {
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .bloco_img img {
+        width: 100%;
+
+        object-fit: cover;
+    }
+}

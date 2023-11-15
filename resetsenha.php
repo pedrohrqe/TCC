@@ -19,7 +19,8 @@ if (isset($_POST['email'])) {
 
         $chave = password_hash($usuario_id, PASSWORD_DEFAULT);
 
-        $link = "http://localhost/site/updatesenha.php?chave=$chave";
+        $link = "http://192.168.0.150/site/updatesenha.php?chave=$chave";
+        // $link = "http://localhost/site/updatesenha.php?chave=$chave";
 
         $sql_code2 = "UPDATE users SET chave = '$chave' WHERE id = $usuario_id";
         $sql_query2 = mysqli_query($mysqli, $sql_code2);
@@ -33,7 +34,7 @@ if (isset($_POST['email'])) {
         echo "<script>alert('Falha ao solicitar redefinição! Verifique o e-mail e tente novamente.');</script>";
     }
 
-    mysqli_close($mysqli); // Fecha a conexão com o banco de dados
+    mysqli_close($mysqli);
 }
 
 ?>
@@ -58,7 +59,7 @@ if (isset($_POST['email'])) {
         <div class="container-2">
             <form method="POST">
                 <label for="email">Informe seu e-mail:</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" autofocus>
                 <button type="submit">Enviar e-mail de recuperação</button>
             </form>
         </div>

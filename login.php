@@ -8,7 +8,6 @@ if (isset($_SESSION['id'])) {
 }
 
 include_once ('conexao.php');
-include_once ('sessaoativa.php');
 
 if (!empty($_POST['email']) && !empty($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -59,14 +58,14 @@ if (!empty($_POST['email']) && !empty($_POST['senha'])) {
     <main>
         <div class="container-1">
             <div class="container-2">
-                <video src="assets/video/video__home.mp4" autoplay muted loop></video>
+                <video src="https://i.imgur.com/ktRm9E9.mp4" autoplay muted loop></video>
             </div>
             <div class="container-3">
-                <h1 class="titulo">Login</h1>
+                <h1 class="titulo">ENTRAR</h1>
                 <form action="" method="post">
                     <label for="usuario">E-mail</label>
                     <input type="text" name="email" class="form__input" placeholder="seu_user@2023" maxlength="70"
-                        required>
+                        required autofocus>
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" class="form__input senha" placeholder="Senha@2023" maxlength="30"
                         id="senha" required>
@@ -82,7 +81,7 @@ if (!empty($_POST['email']) && !empty($_POST['senha'])) {
                 <div class="separador"></div>
                 <div class="botoes">
                     <a href="resetsenha.php">Esqueci minha senha</a>
-                    <a href="cadastro.php">Criar Conta</a>
+                    <a href="cadastro.php">Cadastre-se</a>
                 </div>
             </div>
         </div>

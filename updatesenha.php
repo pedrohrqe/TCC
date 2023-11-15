@@ -50,12 +50,10 @@ if (isset($_POST['btn__senha'])) {
                 <label for="senha">Informe a nova senha:</label>
                 <input type="password" name="senha" class="form__input senha" placeholder="Senha@2023" maxlength="30"
                     id="senha" required>
-                <div>
                     <div class="checkbox-1-cont">
                         <input type="checkbox" name="mostrarsenha" class="checkbox-1">
                         <div class="checkmark"></div>
                     </div>
-                </div>
                 <button type="submit" name="btn__senha">Atualizar senha</button>
             </form>
         </div>

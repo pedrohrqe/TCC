@@ -9,7 +9,7 @@
     width: 100%;
     height: 870px;
 
-    background-color: var(--cor-borda-cinza-3);
+    background-color: var(--p1-cinza);
 }
 
 .container-3 {
@@ -38,8 +38,7 @@
     height: 100%;
     padding: 15px;
 
-    border-radius: 5px;
-    background-color: var(--cor-borda-cinza-3);
+    background-color: var(--p1-cinza);
 
     gap: 25px;
 }
@@ -47,8 +46,6 @@
 .titulo {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 2.9rem;
-
-    color: var(--cor-7);
 }
 
 form {
@@ -72,8 +69,7 @@ form ul {
 
     text-align: left;
 
-    border: 1px solid var(--cor-borda-cinza-2);
-    border-radius: 5px;
+    border: 1px solid var(--p1-borda);
     background-color: #008a4548;
 
     gap: 10px;
@@ -92,7 +88,6 @@ form ul li {
 
     text-indent: 10px;
 
-    border-radius: 5px;
     box-shadow: inset 0px 0px 12px 0px rgb(0, 0, 0, 0.1);
 }
 
@@ -102,7 +97,6 @@ form label {
 
     width: 100%;
 
-    border-radius: 5px;
 }
 
 form div {
@@ -123,36 +117,41 @@ input[type="checkbox"] {
     height: 20px;
 
     border: none;
-    border-radius: 250px;
     outline: none;
 }
 
 #submit {
-    height: 32px;
-    padding: 5px 40px;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 
-    color: var(--cor-branco);
-    border: 1px solid var(--cor-borda-cinza);
-    border-radius: 5px;
-    background-color: var(--cor-1);
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--p1-branco);
+    border: none;
+    outline: none;
+    background: none;
+    background-color: var(--p1-verde);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
 }
 
 #submit:hover {
+    cursor: pointer;
     transition: 300ms;
 
-    color: var(--cor-preto);
-    background-color: var(--cor-2);
-    box-shadow: 0 0 15px 0px var(--cor-1);
+    background-color: var(--p1-cinza-2);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
 }
+
 
 .separador {
     width: 90%;
     height: 1px;
     margin: 35px 0px;
 
-    background-color: var(--cor-borda-cinza);
+    background-color: var(--p1-borda);
 }
 
 .checkbox-cont {
@@ -195,9 +194,8 @@ input[type="checkbox"] {
 
     transition: 400ms;
 
-    border: 1px solid var(--cor-borda-cinza);
-    border-radius: 5px;
-    background-color: var(--cor-borda-cinza);
+    border: 1px solid var(--p1-borda);
+    background-color: var(--p1-borda);
     background-image: url(/assets/icon/pass_hide.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -207,7 +205,7 @@ input[type="checkbox"] {
 .checkbox:checked+.checkmark {
     transition: 400ms;
 
-    background-color: var(--cor-1);
+    background-color: var(--p1-verde);
     background-image: url(/assets/icon/pass_show.png);
 }
 

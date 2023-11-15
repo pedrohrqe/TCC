@@ -1,7 +1,5 @@
 <?php
 
-include_once ('sessaoativa.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -22,22 +20,21 @@ include_once ('sessaoativa.php');
     <main>
         <div class="container container-1">
             <div class="cont-1-txt">
-                <img src="assets/img/logo_simple_branco.png" alt="">
-                <p>APLAE
-                    transformando o cenário de
-                    energia renovável de uma maneira que você nunca imaginou.
-                    Junte-se a nós na jornada para um amanhã mais brilhante,
-                    onde a energia renovável não é mais uma ideia de nicho, mas
-                    uma realidade cotidiana.</p>
+                <div>
+                    <img src="assets/img/logo_simple_branco.png" alt="">
+                    <h1>Aplae</h1>
+                </div>
+                <h2>Transformando o cenário de
+                    energia renovável de uma maneira que você nunca imaginou.</h2>
                 <div class="buttons">
-                    <a href="produto.html" class="cont-link">mais sobre</a>
-                    <a href="login.php" class="cont-link">teste já</a>
+                    <a href="produto.php" class="cont-link">Mais sobre</a>
+                    <a href="login.php" class="cont-link">Teste já</a>
                 </div>
             </div>
-            <video src="assets/video/video__home.mp4" autoplay muted loop></video>
+            <video src="https://i.imgur.com/ktRm9E9.mp4" autoplay muted loop></video>
         </div>
         <div class="container container-4">
-            <h2>SUSTENTABILIDADE E SUA COMPLEXIDADE</h2>
+            <h2>Sustentabilidade e sua Complexidade</h2>
             <div>
                 <img src="assets/icon/sustainability_2.png" alt="">
                 <p>É reconhecido que a sustentabilidade é algo complexo e abrangente e que existem muitas maneiras de
@@ -53,42 +50,43 @@ include_once ('sessaoativa.php');
             </div>
         </div>
         <div class="container container-2">
-            <img src="assets/icon/data.png" alt="" srcset="">
             <h2>Emergia</h2>
-            <p>A Emergia é uma maneira de medir a quantidade de energia que está armazenada em um produto, processo ou
-                serviço. Ela inclui todas as energias que são usadas diretamente ou indiretamente na produção,
-                transporte, distribuição e uso de um item ou serviço. A Emergia é expressa em sej (joules de energia
-                solar), que é uma unidade especial para somar todas as contribuições de energia usadas para criar um
-                determinado resultado. Essa abordagem única nos ajuda a juntar todas as diferentes formas de energia que
-                são usadas, mostrando o verdadeiro custo de energia por trás de cada produto ou serviço.</p>
+            <p>A Emergia é uma abordagem abrangente para quantificar a energia envolvida em produtos, processos ou serviços. Ela não se limita à energia elétrica ou térmica, mas inclui todas as formas de energia, como solar, eólica, hidrelétrica, nuclear e fóssil, usadas direta ou indiretamente na criação e entrega de um item ou serviço.
+                <br>
+                <br>
+                A unidade de medida utilizada, conhecida como sej (joules de energia solar), permite que todas essas contribuições energéticas diferentes sejam somadas de forma padronizada. Isso é fundamental para compreender o verdadeiro custo de energia associado a qualquer coisa que produzimos ou consumimos.
+                <br>
+                <br>
+                A Emergia considera a energia incorporada em todos os materiais, insumos e recursos naturais usados na produção, levando em conta a energia solar capturada pelas plantas que se tornam matérias-primas, bem como a energia dos processos biogeoquímicos que formam esses recursos. A energia gasta no transporte, distribuição, uso ao longo da vida útil e descarte de um produto ou serviço também é considerada.
+                <br>
+                <br>
+                Essa abordagem permite a comparação justa entre produtos e serviços, independentemente de sua fonte de energia ou estágio de produção. Ela também promove a conscientização ambiental, destacando o verdadeiro custo energético por trás das escolhas de consumo. No geral, a Emergia é uma ferramenta valiosa para avaliar o impacto ambiental e a eficiência energética, incentivando a busca por alternativas mais sustentáveis em um mundo preocupado com a conservação e o uso responsável da energia.
+            </p>
         </div>
         <div class="container container-3">
-            <img src="assets/icon/tool.png" alt="">
-            <h2>EMERGIA COMO FERRAMENTA</h2>
-            <p>A Emergia é uma ferramenta valiosa para a avaliação do impacto ambiental dos produtos, processos e
-                serviços. Ela pode ser usada para identificar e priorizar oportunidades de melhoria da eficiência
-                energética e da sustentabilidade. A Emergia também pode ser usada para comparar diferentes produtos,
-                processos e serviços em termos de seu impacto ambiental.</p>
+            <h2>Emergia como Ferramenta</h2>
+            <p>A Emergia desempenha um papel fundamental como uma ferramenta de avaliação de impacto ambiental para produtos, processos e serviços diversos. Sua aplicação estratégica se estende à identificação e priorização de oportunidades voltadas para a melhoria da eficiência energética e da sustentabilidade.
+                <br><br>
+                A Emergia também se destaca na capacidade de viabilizar comparações criteriosas entre elementos distintos, como produtos, processos e serviços, quando se trata de seu impacto ambiental. Essa competência analítica é particularmente valiosa para orientar escolhas ponderadas e ecologicamente responsáveis em um contexto global que busca ativamente a minimização dos impactos negativos sobre o meio ambiente.
+                <br><br>
+                Ao permitir uma avaliação abrangente das diversas contribuições energéticas ao longo do ciclo de vida de um produto ou serviço, a Emergia oferece uma visão abalizada de seu custo energético e ambiental real. Essa perspectiva embasa decisões informadas e estratégias voltadas à redução eficaz do impacto ambiental, contribuindo, assim, para um horizonte futuro mais sustentável e em harmonia com os princípios da preservação ambiental. Em síntese, a Emergia é uma ferramenta de relevância inquestionável para fomentar práticas mais ecológicas e eficazes em nossa sociedade dinâmica e em constante evolução.
+            </p>
         </div>
         <div class="container container-5">
-            <div class="container-5-1">
-                <img src="assets/icon/application.png" alt="">
-                <h2>aplicação</h2>
+            <h2>Aplicação</h2>
+            <p>Reconhecemos o papel crucial que desempenhamos na jornada em direção a um futuro mais sustentável e
+                ecologicamente consciente. Nossa missão é capacitar empresas e organizações a compreender os
+                impactos ambientais e econômicos de seus equipamentos, usando os dados energéticos de seus sistemas,
+                seja através de informações pré-estabelecidas ou ao conectar esses dados a módulos de Internet das
+                Coisas (IoT). Fornecemos informações que permitem aprimorar o desempenho, reduzir o consumo de
+                recursos e contribuir para a preservação do meio ambiente. Estamos empenhados em oferecer uma
+                ferramenta de análise avançada, que combina tecnologia inovadora, expertise especializado e
+                integridade, tudo em um ambiente único e de fácil utilização.</p>
+            <div class="buttons">
+                <a href="produto.php" class="cont-link">Mais sobre</a>
+                <a href="login.php" class="cont-link">Teste já</a>
             </div>
-            <div class="container-5-2">
-                <p>Reconhecemos o papel crucial que desempenhamos na jornada em direção a um futuro mais sustentável e
-                    ecologicamente consciente. Nossa missão é capacitar empresas e organizações a compreender os
-                    impactos ambientais e econômicos de seus equipamentos, usando os dados energéticos de seus sistemas,
-                    seja através de informações pré-estabelecidas ou ao conectar esses dados a módulos de Internet das
-                    Coisas (IoT). Fornecemos informações que permitem aprimorar o desempenho, reduzir o consumo de
-                    recursos e contribuir para a preservação do meio ambiente. Estamos empenhados em oferecer uma
-                    ferramenta de análise avançada, que combina tecnologia inovadora, expertise especializado e
-                    integridade, tudo em um ambiente único e de fácil utilização.</p>
-                <div class="buttons">
-                    <a href="produto.html" class="cont-link">mais sobre</a>
-                    <a href="login.php" class="cont-link">teste já</a>
-                </div>
-            </div>
+        </div>
         </div>
     </main>
     <footer></footer>

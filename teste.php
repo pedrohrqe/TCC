@@ -1,7 +1,6 @@
-<?php 
+<?php
 
 include_once ('protect.php');
-include_once ('sessaoativa.php');
 
 ?>
 
@@ -29,7 +28,7 @@ include_once ('sessaoativa.php');
             <div class="container-3">
                 <h1>Selecione a opção para download:</h1>
                 <div class="radio-group">
-                    <input class="radio-input" name="radio-group" id="radio1" type="radio">
+                    <input class="radio-input" name="radio-group" id="radio1" type="radio" checked>
                     <label class="radio-label" for="radio1">
                         <img src="assets/icon/software.png" alt="">
                         <p>Ferramenta</p>
@@ -45,21 +44,21 @@ include_once ('sessaoativa.php');
                         <p>Ferramenta + Dados</p>
                     </label>
                 </div>
-                <a href="" id="btn__baixar" download="Emergia">BAIXAR</a>
+                <a href="download/FerramentaGrafica.xlsm" id="btn__baixar">Baixar</a>
             </div>
             <div class="container-4">
-                <h1>informações de usuário</h1>
+                <h1>Informações de usuário</h1>
                 <div class="container-5">
-                    <p id="nome">Nome: <?php echo $_SESSION['nome']?></p>
-                    <p id="sobrenome">Sobrenome: <?php echo $_SESSION['sobrenome']?></p>
-                    <p id="contato">Telefone: <?php echo $_SESSION['telefone']?></p>
-                    <p id="Organização">Organização: <?php echo $_SESSION['organizacao']?></p>
-                    <p id="email">Email: <?php echo $_SESSION['email']?></p>
+                    <p id="nome">Nome: <?php echo $_SESSION['nome'] ?></p>
+                    <p id="sobrenome">Sobrenome: <?php echo $_SESSION['sobrenome'] ?></p>
+                    <p id="contato">Telefone: <?php echo $_SESSION['telefone'] ?></p>
+                    <p id="Organização">Organização: <?php echo $_SESSION['organizacao'] ?></p>
+                    <p id="email">Email: <?php echo $_SESSION['email'] ?></p>
                     <p> Senha: *************</p>
                 </div>
                 <hr style="margin: 0px;">
                 <a href="alterar.php">Alterar dados</a>
-                <a href="sair.php">sair</a>
+                <a href="sair.php">Sair</a>
             </div>
         </div>
     </main>

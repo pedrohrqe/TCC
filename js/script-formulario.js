@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const telefoneInput = document.getElementById("telefone");
 
-    telefoneInput.addEventListener("input", function() {
+    telefoneInput.addEventListener("input", function () {
         const value = telefoneInput.value.replace(/\D/g, ""); // Remover todos os caracteres não numéricos
         const formattedValue = formatPhoneNumber(value);
         telefoneInput.value = formattedValue;
@@ -69,3 +69,18 @@ toggleMostrarSenha.addEventListener("change", function () {
         input.type = tipo;
     });
 });
+
+function verificarEApagar() {
+    var emailInput = document.getElementById('email');
+    var email = emailInput.value;
+
+    // Verifica se o e-mail não termina com '@aluno.unip.br' ou '@docente.unip.br'
+    if (!(email.endsWith('@aluno.unip.br') || email.endsWith('@docente.unip.br'))) {
+        // Adia a remoção do conteúdo para o próximo ciclo do evento assíncrono (usando setTimeout)
+        emailInput.value = '';
+        alert('Email não pertence a Universidade Paulista');
+    }
+}
+
+// Adiciona a função ao evento oninput do campo de entrada
+document.getElementById('email').addEventListener('change', verificarEApagar);

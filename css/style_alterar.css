@@ -7,13 +7,13 @@
 
     padding: 10vh 10vw;
 
-    background-color: var(--cor-6);
+    background-color: var(--p1-verde);
 
     gap: 15px;
 }
 
 .container-1 h1 {
-    color: var(--cor-branco);
+    color: var(--p1-branco);
 }
 
 .container-2 {
@@ -36,28 +36,25 @@
     font-weight: 400;
 
     height: 32px;
-    padding: 0px 10px;
+    padding: 0px 0px;
 
     transition: 300ms;
     text-align: center;
 
-    color: var(--cor-branco);
-    border-radius: 5px;
+    color: var(--p1-branco);
     outline: none;
-    background-color: var(--cor-1);
+    background-color: var(--p1-verde);
     box-shadow: inset 0px 0px 12px 0px rgb(0, 0, 0, 0.1);
 }
 
 .container-2 select:hover {
     transition: 300ms;
-
-    color: var(--cor-preto);
-    background-color: var(--cor-8);
+    background-color: var(--p1-verde);
 }
 
 .container-2 option {
-    color: var(--cor-preto);
-    background-color: var(--cor-2);
+    color: var(--p1-branco);
+    background-color: var(--p1-verde);
 }
 
 .container-3 {
@@ -76,7 +73,7 @@
     width: 1px;
     height: 280px;
 
-    background-color: var(--cor-borda-cinza);
+    background-color: var(--p1-borda);
 }
 
 form {
@@ -87,8 +84,7 @@ form {
     max-width: 250px;
     padding: 15px;
 
-    border: 1px solid var(--cor-borda-cinza);
-    border-radius: 5px;
+    border: 1px solid var(--p1-borda);
 
     gap: 10px;
 }
@@ -99,6 +95,7 @@ form.active {
 
 form h1,
 .container-3 h1 {
+    align-self: center;
     font-size: 1.5rem;
 
     padding-bottom: 15px;
@@ -110,7 +107,6 @@ form label {
 
     width: 100%;
 
-    border-radius: 5px;
 }
 
 form input {
@@ -122,7 +118,6 @@ form input {
 
     text-indent: 10px;
 
-    border-radius: 5px;
     box-shadow: inset 0px 0px 12px 0px rgb(0, 0, 0, 0.1);
 }
 
@@ -137,8 +132,7 @@ form ul {
 
     text-align: left;
 
-    border: 1px solid var(--cor-borda-cinza-2);
-    border-radius: 5px;
+    border: 1px solid var(--p1-borda-2);
     background-color: #008a4548;
 
     gap: 10px;
@@ -148,21 +142,30 @@ form ul li {
     font-weight: 500;
 }
 
-form button {
-    height: 32px;
+form button, .container-3 a {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 
-    color: var(--cor-branco);
-    border: 1px solid var(--cor-borda-cinza);
-    border-radius: 5px;
-    background-color: var(--cor-1);
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--p1-branco);
+    border: none;
+    outline: none;
+    background: none;
+    background-color: var(--p1-verde);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
 }
 
-form button:hover {
+form button:hover, .container-3 a:hover {
+    cursor: pointer;
     transition: 300ms;
 
-    color: var(--cor-preto);
-    background-color: var(--cor-2);
-    box-shadow: 0 0 15px 0px var(--cor-1);
+    background-color: var(--p1-cinza-2);
+    box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.1);
 }
 
 .checkbox-div {
@@ -211,9 +214,8 @@ form button:hover {
 
     transition: 400ms;
 
-    border: 1px solid var(--cor-borda-cinza);
-    border-radius: 5px;
-    background-color: var(--cor-borda-cinza);
+    border: 1px solid var(--p1-borda);
+    background-color: var(--p1-borda);
     
     background-image: url(/assets/icon/pass_hide.png);
     background-repeat: no-repeat;
@@ -224,7 +226,7 @@ form button:hover {
 .checkbox:checked+.checkmark {
     transition: 400ms;
 
-    background-color: var(--cor-1);
+    background-color: var(--p1-verde);
     background-image: url(/assets/icon/pass_show.png);
 }
 
@@ -238,14 +240,6 @@ form button:hover {
 
 .checkbox:checked~.checkmark:after {
     display: block;
-}
-
-.container-3 a:hover {
-    transition: 300ms;
-
-    color: var(--cor-preto);
-    background-color: var(--cor-2);
-    box-shadow: 0 0 15px 0px var(--cor-1);
 }
 
 @media(max-width: 1000px) {

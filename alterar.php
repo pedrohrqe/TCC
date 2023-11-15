@@ -1,7 +1,6 @@
 <?php
 
 include_once ('protect.php');
-include_once ('sessaoativa.php');
 
 if (isset($_POST['btn_nome'])) {
     include('conexao.php'); // Verifica se o botão de envio foi clicado
@@ -227,7 +226,7 @@ if (isset($_POST['btn_senha'])) {
                 <button type="submit" name="btn_organizacao">Alterar Organização</button>
             </form>
             <form action="" method="POST" id="form__email">
-                <h1>alterar e-mail</h1>
+                <h1>Alterar e-mail</h1>
                 <label for="email">Informe seu novo e-mail:</label>
                 <input required type="text" name="email" class="form__input" required placeholder="seu_user@2023" maxlength="70" minlength="4">
                 <button type="submit" name="btn_email">Alterar E-mail</button>
